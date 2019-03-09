@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HomeService} from './home-service.service';
+import {HomeService} from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +7,18 @@ import {HomeService} from './home-service.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  userName = 'aa';
-  constructor(public homeService: HomeService) {
-    this.homeService.getProducts().subscribe((data) => {
-      debugger;
-    }, () => {
-    });
-  }
 
-
-
+  products: any;
+  userName: any = 'aaaa';
+  constructor(public homeService: HomeService) { }
 
   ngOnInit() {
+  }
+
+  onClick1() {
+    this.homeService.getProducts().subscribe((data) => {
+        this.products = data;
+    });
   }
 
 }

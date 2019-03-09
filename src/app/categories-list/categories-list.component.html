@@ -1,0 +1,8 @@
+<div>
+ <div class = "app-categories-list_title">
+   <h2>browse our most popular categories</h2>
+ </div>
+  <div class ="app-categories-list">
+    <app-category *ngFor="let c of categories" class="app-category-item" [category]="c"></app-category>
+  </div>
+</div>

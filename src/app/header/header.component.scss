@@ -1,0 +1,18 @@
+@import "../sass/variable";
+
+.app-header_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $brand-color;
+}
+
+.app-header_nav-item {
+  padding: $unit;
+}
